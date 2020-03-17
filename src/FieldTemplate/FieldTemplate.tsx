@@ -15,9 +15,14 @@ const FieldTemplate = ({
   rawErrors = [],
   rawHelp,
   rawDescription,
+  classNames = '',
 }: FieldTemplateProps) => {
   return (
-    <FormControl fullWidth={true} error={rawErrors.length ? true : false}>
+    <FormControl
+      fullWidth={true}
+      error={rawErrors.length ? true : false}
+      className={classNames}
+    >
       {children}
       {displayLabel && rawDescription ? (
         <Typography variant="caption" color="textSecondary">
